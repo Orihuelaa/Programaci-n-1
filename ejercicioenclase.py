@@ -4,7 +4,10 @@ def main():  #Es el punto de entrada principal, donde se inicia la ejecución de
 
         # Pedir al usuario que ingrese la fecha en el formato indicado
         fecha_actual = input("Ingrese la fecha en formato día, y luego DD/MM: ")
-        dia_semana, fecha = fecha_actual.split(',')#.split(',') sirve para dividir la entrada de fecha_actual en dos partes distintas((dia_semana por un lado y fecha por el otro), utilizando la coma como delimitador.
+        dia_semana, fecha = map(str.strip, fecha_actual.split(','))#.split(',') sirve para dividir la entrada de fecha_actual en dos partes distintas
+        #(dia_semana por un lado y fecha por el otro), utilizando la coma como delimitador.
+        #map()aplica una función específica a todos los elementos en un iterable de entrada (como una lista, tupla, etc.) y devuelve un iterador que produce los resultados. Es una función incorporada que se utiliza a menudo para transformar o modificar datos de forma concisa.
+        #map()función se usa para aplicar str.strip a cada elemento producido por fecha_actual.split(','). El str.strip() elimina los espacios en blanco iniciales y finales (como espacios y caracteres de nueva línea) de una cadena.
         dia, mes = fecha.split('/')#.split('/') sirve para dividir la entrada de fecha en dos partes distintas (dia por un lado y mes por el otro), utilizando / como delimitador.
 
         # Convertir a minúsculas para que no genere errores si se utilizan mayusculas.

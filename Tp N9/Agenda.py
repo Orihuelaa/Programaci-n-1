@@ -23,20 +23,20 @@ class Agenda:
         # Itera sobre la lista de contactos y muestra la información de cada uno.
         for i, contact in enumerate(self.contacts, start=1):
             print(f"Contacto {i}:")
-            print(f"Nombre: {contact['nombre']}")  # Corregir 'name' a 'nombre'
-            print(f"Telefono: {contact['telefono']}")  # Corregir 'phone' a 'telefono'
-            print(f"Email: {contact['email']}")  # Corregir 'email' a 'email'
+            print(f"Nombre: {contact['nombre']}") 
+            print(f"Telefono: {contact['telefono']}")
+            print(f"Email: {contact['email']}") 
             print()
 
     def find_contact(self, name):
     # Método para buscar un contacto por nombre.
     # Itera sobre la lista de contactos y compara el nombre con el proporcionado.
         for contact in self.contacts:
-            if contact['nombre'] == name:  # Corregir 'name' a 'nombre'
+            if contact['nombre'] == name: 
             # Si se encuentra el contacto, muestra su información.
-                print(f"Nombre: {contact['nombre']}")  # Corregir 'name' a 'nombre'
-                print(f"Telefono: {contact['telefono']}")  # Corregir 'phone' a 'telefono'
-                print(f"Email: {contact['email']}")  # Corregir 'email' a 'email'
+                print(f"Nombre: {contact['nombre']}") 
+                print(f"Telefono: {contact['telefono']}") 
+                print(f"Email: {contact['email']}") 
                 return
     # Si no se encuentra el contacto, muestra un mensaje de que no se encontró.
     print("Contacto no encontrado.")
